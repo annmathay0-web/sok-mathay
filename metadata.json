@@ -1,0 +1,8 @@
+{
+  "name": "Remix   ប្រព័ន្ធគ្រប់គ្រងការចងការប្រាក់ និងប្រាក់កម្ចី",
+  "description": "ប្រព័ន្ធគ្រប់គ្រងការចងការប្រាក់ និងប្រាក់កម្ចី (Loan \u0026 Interest Management System) - គ្រប់គ្រងអ្នកខ្ចី, គណនាការប្រាក់ថេរ/ថយចុះ, ស្រង់វត្តមានបង់ប្រាក់, និង Import/Export Excel",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Kantumruuy Pro', 'Battambang', 'Koh Santepheap', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-km: 'Kantumruuy Pro', 'Battambang', system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    font-family: 'Kantumruuy Pro', 'Battambang', 'Koh Santepheap', system-ui, -apple-system, sans-serif;
+  }
+
+  html, body {
+    font-family: 'Kantumruuy Pro', 'Battambang', 'Koh Santepheap', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+  }
+
+  /* Force all controls & typographic elements to inherit Khmer font consistently and prevent clipping */
+  *, input, button, select, textarea, table, th, td, label, p, h1, h2, h3, h4, h5, h6, span, div {
+    font-family: 'Kantumruuy Pro', 'Battambang', 'Koh Santepheap', system-ui, sans-serif;
+    letter-spacing: normal !important;
+  }
+
+  /* Prevent clipping of Khmer vowels (ស្រៈលើ-ក្រោម) and subscript legs (ជើងអក្សរ) */
+  table th, table td {
+    padding-top: 0.65rem !important;
+    padding-bottom: 0.65rem !important;
+    line-height: 1.6 !important;
+  }
+
+  button, input, select, textarea, span, label, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.55;
+  }
+}
+
+/* Custom dark scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Light Theme Overrides */
+.light, html.light {
+  background-color: #f8fafc !important; /* slate-50 */
+  color: #0f172a !important; /* slate-900 */
+}
+
+.light header, 
+.light nav,
+.light aside,
+.light .bg-slate-900,
+.light .bg-slate-900\/90,
+.light .bg-slate-900\/80,
+.light .bg-slate-900\/95,
+.light .bg-slate-900\/50,
+.light .bg-slate-950,
+.light .bg-slate-950\/80,
+.light .bg-slate-950\/50 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important; /* slate-300 */
+}
+
+.light .border-slate-800,
+.light .border-slate-800\/80,
+.light .border-slate-700,
+.light .border-slate-700\/50,
+.light .border-slate-900 {
+  border-color: #cbd5e1 !important;
+}
+
+.light .bg-slate-800,
+.light .bg-slate-800\/50,
+.light .bg-slate-800\/80 {
+  background-color: #f1f5f9 !important; /* slate-100 */
+  color: #0f172a !important;
+}
+
+/* Gradients override in light mode to prevent black text on black background */
+.light .from-slate-800,
+.light .from-slate-900,
+.light .from-slate-950 {
+  --tw-gradient-from: #f8fafc var(--tw-gradient-from-position, ) !important;
+}
+
+.light .to-slate-800,
+.light .to-slate-900,
+.light .to-slate-950 {
+  --tw-gradient-to: #f1f5f9 var(--tw-gradient-to-position, ) !important;
+}
+
+/* Default text color mappings for light mode */
+.light .text-slate-100,
+.light .text-slate-200,
+.light .text-slate-300 {
+  color: #0f172a !important;
+}
+
+.light .text-slate-400 {
+  color: #475569 !important; /* slate-600 */
+}
+
+.light .text-slate-500 {
+  color: #64748b !important; /* slate-500 */
+}
+
+/* Solid colored buttons & badges MUST retain high contrast dark text */
+.light .bg-emerald-500 {
+  background-color: #10b981 !important;
+  color: #020617 !important;
+}
+
+.light .bg-emerald-500 *,
+.light .bg-emerald-400 * {
+  color: #020617 !important;
+}
+
+.light .bg-emerald-500\/10,
+.light .bg-emerald-500\/20 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+.light .bg-rose-500\/10,
+.light .bg-rose-500\/20 {
+  background-color: rgba(244, 63, 94, 0.15) !important;
+}
+
+.light .bg-teal-500\/10,
+.light .bg-teal-500\/20 {
+  background-color: rgba(20, 184, 166, 0.15) !important;
+}
+
+.light .bg-cyan-500\/10,
+.light .bg-cyan-500\/20 {
+  background-color: rgba(6, 182, 212, 0.15) !important;
+}
+
+.light .bg-indigo-500\/10,
+.light .bg-indigo-500\/20 {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+.light input[type="text"],
+.light input[type="number"],
+.light input[type="date"],
+.light select,
+.light textarea {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light input::placeholder,
+.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.light .hover\:bg-slate-800\/50:hover,
+.light .hover\:bg-slate-800:hover,
+.light .hover\:bg-slate-700\/80:hover {
+  background-color: #e2e8f0 !important;
+}
+
+.light table th {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+.light table td {
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Print CSS for Receipts, Agreements & Schedules */
+@media print {
+  body, html {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .no-print, .no-print-backdrop, button.no-print, nav, header, aside {
+    display: none !important;
+  }
+
+  /* Reset modal containers so they lay flat on page */
+  .fixed, .absolute {
+    position: static !important;
+  }
+
+  div[class*="backdrop"], div[class*="fixed inset-0"] {
+    position: static !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .overflow-y-auto, .overflow-hidden, .overflow-x-auto {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  .printable-area, .printable-a4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th, td {
+    border: 1px solid #94a3b8 !important;
+    color: #000000 !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+  }
+}
+
